@@ -14,5 +14,5 @@ do_install() {
     install -m 0644 ${WORKDIR}/hello-internet.service ${D}${systemd_system_unitdir}
 }
 
-SYSTEMD_SERVICE_${PN} = "hello-internet.service"
+SYSTEMD_SERVICE:${PN} = "hello-internet.service"
 FILES_${PN} += "${systemd_system_unitdir}/hello-internet.service"
